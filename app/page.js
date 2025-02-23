@@ -1,9 +1,12 @@
 import Image from "next/image";
+import Herosection from "./ui/Herosection";
+import herosectionBg from "@/assets/herosection/herosection-bg.jpg";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] text-5xl font-extrabold">
-      asdfsdf
+    <div className=" bg-cover bg-center" 
+    style={{ backgroundImage: `url(${herosectionBg.src})` }}>
+      <Herosection />
     </div>
   );
 }

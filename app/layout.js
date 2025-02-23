@@ -1,5 +1,7 @@
 import { Geist, Geist_Mono, Space_Grotesk } from "next/font/google";
 import "./globals.css";
+import Navbar from "./ui/Navbar";
+import Footer from "./ui/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 const SpaceGrotesk = Space_Grotesk({
-  subsets: ['latin'],
-  display: 'swap',
+  subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata = {
@@ -24,10 +26,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={` ${SpaceGrotesk.className} antialiased`}
-      >
-        {children}
+      <body className={` ${SpaceGrotesk.className} antialiased`}>
+        <main>
+          <Navbar />
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );
