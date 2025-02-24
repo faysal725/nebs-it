@@ -12,8 +12,8 @@ export default function FormSection({isServeyFinish = false}) {
 
   const [currentStep, setCurrentStep] = useState(1);
 
-  const [homeOwner, setHomeOwner] = useState();
-  const [electricityBill, setElectricityBill] = useState();
+  const [homeOwner, setHomeOwner] = useState(null);
+  const [electricityBill, setElectricityBill] = useState(null);
   const [creditScore, setCreditScore] = useState();
   const [name, setName] = useState();
   const [address, setAddress] = useState();
@@ -26,12 +26,12 @@ export default function FormSection({isServeyFinish = false}) {
   function handleSubmit() {
     console.log("Current Step:", currentStep);
 
-    if (currentStep === 1 && homeOwner === "true") {
+    if (currentStep === 1 && homeOwner !== null) {
       stepUp();
       return;
     }
 
-    if (currentStep === 2 && electricityBill === "true") {
+    if (currentStep === 2 && electricityBill !== null) {
       stepUp();
       return;
     }
