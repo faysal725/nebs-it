@@ -1,7 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 
 export default function FormSteps({ steps = 1, current = 4 }) {
-  //   const [allSteps, setAllSteps] = useState([1, 2, 3, 4, 5]);
 
   const allSteps = useMemo(() => {
     return Array.from({ length: steps }, (_, i) => i + 1);
@@ -24,7 +23,7 @@ export default function FormSteps({ steps = 1, current = 4 }) {
             </div>
 
             <p
-              className={`text-xs  text-start             ${
+              className={`text-[10px]  text-start             ${
                 step >= current ? "text-black" : "text-indigo-500"
               } `}
             >
@@ -36,7 +35,7 @@ export default function FormSteps({ steps = 1, current = 4 }) {
             <li className="flex flex-col justify-start h-7">
               <span
                 className={`h-[1px]  block bg-black mt-2 ${
-                  step == current ? "w-9" : "w-5"
+                  step == current ? "w-12" : "w-7"
                 } ${step < current && "hidden"}`}
               ></span>
             </li>

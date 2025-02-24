@@ -2,15 +2,15 @@ import React from "react";
 import herosectionBg from "@/assets/herosection/herosection-bg.jpg";
 import FormSection from "./FormSection";
 
-export default function Herosection() {
+export default function Herosection({isServeyFinish = false}) {
   return (
     <main className="min-h-screen  p-2 relative z-0 flex justify-center items-center">
       <span className="absolute top-0 right-0 w-full h-full bg-black/55 z-10"></span>
 
-      <section className="relative z-20 max-w-7xl mx-auto  text-white grid grid-cols-1 md:grid-cols-2 gap-4">
+      <section className="relative z-20 max-w-7xl mx-auto  text-white grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="flex flex-col gap-5 mt-20 md:mt-0 md:justify-around">
           <div>
-            <h2 className="text-3xl lg:text-5xl font-medium ">
+            <h2 className="text-3xl lg:text-6xl font-medium ">
               Power Your Home. Empower Your Future. Switch to Solar Today!
             </h2>
           </div>
@@ -23,8 +23,8 @@ export default function Herosection() {
             </li>
           </ul>
         </div>
-        <div className="mt-10 md:mt-0 lg:flex lg:justify-end">
-          <FormSection />
+        <div className="mt-10 md:mt-0 lg:flex lg:justify-end ">
+          <FormSection isServeyFinish={isServeyFinish}/>
         </div>
       </section>
     </main>

@@ -5,8 +5,11 @@ import FormSteps from "./FormSteps";
 import InputBox from "./InputBox";
 import Radio from "./Radio";
 import Button from "./Button";
+import { useRouter } from "next/navigation";
 
-export default function FormSection() {
+export default function FormSection({isServeyFinish = false}) {
+    const router = useRouter()
+
   const [currentStep, setCurrentStep] = useState(1);
 
   const [homeOwner, setHomeOwner] = useState();
@@ -44,7 +47,7 @@ export default function FormSection() {
     }
 
     if (currentStep === 5 && contact && time) {
-      stepUp();
+      router.push("/thank-you"); 
     }
   }
 
@@ -58,7 +61,7 @@ export default function FormSection() {
 
   return (
     <main className=" text-base font-semibold text-black p-6 rounded-2xl relative overflow-hidden  bg-white min-h-80">
-      <p>Complete the steps to unlock your solar potential</p>
+      <p className="text-xl">Complete the steps to unlock your solar potential</p>
 
       <section>
         <FormSteps steps={5} current={currentStep} />
@@ -188,7 +191,7 @@ export default function FormSection() {
 
           {currentStep < 5 ? (
             <Button
-              variant="primary"
+              variant={currentStep ==1 ? "large" : "primary"}
               type="submit"
               onClick={() => handleSubmit()}
             >
@@ -212,7 +215,7 @@ export default function FormSection() {
         </div>
       </section>
 
-      {currentStep === 6 && (
+      {isServeyFinish && (
         <section className="absolute w-full h-full top-0 right-0 bg-white p-8 space-y-6 md:space-y-4">
           <div className="border-b border-b-black py-5">
             <p className="text-base text-center">Thank you for your response </p>
@@ -227,7 +230,7 @@ export default function FormSection() {
           </div>
           <div className="flex justify-center ">
             <Button
-              onClick={() => setCurrentStep((prev) => prev - 5)}
+              onClick={() => router.push('/')}
               variant="primary"
               type="submit"
             >

@@ -7,6 +7,7 @@ const Button = ({ children, onClick, type = "button", variant = "primary", disab
       secondary: "bg-gray-500 text-white hover:bg-gray-600",
       danger: "bg-red-500 text-white hover:bg-red-600",
       outline: "border border-blue-900 text-blue-900 hover:bg-blue-900 hover:text-white",
+      large: "bg-blue-900 text-white hover:bg-white hover:text-blue-900 border border-blue-900 w-80",
     };
   
     return (
