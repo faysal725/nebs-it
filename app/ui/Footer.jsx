@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Footer() {
   return (
-    <main className='-mt-20 md:-mt-14 relative'>
+    <main className=' md:-mt-9 relative z-20'>
         <section className='flex flex-col md:flex-row items-start md:justify-between gap-2 max-w-7xl mx-auto p-2'>
             <div className='text-sm text-white'>
             © 2024 HomeownersBenifit. All rights reserved

@@ -4,8 +4,7 @@ import herosectionBg from "@/assets/herosection/herosection-bg.jpg";
 
 export default function Home() {
   return (
-    <div className=" bg-cover bg-center" 
-    style={{ backgroundImage: `url(${herosectionBg.src})` }}>
+    <div >
       <Herosection />
     </div>
   );

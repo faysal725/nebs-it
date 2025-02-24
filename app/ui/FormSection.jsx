@@ -60,7 +60,7 @@ export default function FormSection({isServeyFinish = false}) {
   }
 
   return (
-    <main className=" text-base font-semibold text-black p-6 rounded-2xl relative overflow-hidden  bg-white min-h-80">
+    <main className=" text-base font-semibold text-black p-8 rounded-2xl relative overflow-hidden  bg-white min-h-80">
       <p className="text-xl">Complete the steps to unlock your solar potential</p>
 
       <section>

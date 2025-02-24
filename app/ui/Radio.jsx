@@ -4,7 +4,6 @@ import React from 'react'
 const Radio = ({ options, name, selected, onChange, label, required=false }) => {
     return (
       <div className="flex flex-col space-y-2">
-        {/* {label && <p className="text-lg font-medium">{label}</p>} */}
         <div className="space-x-1">
         {label && <label className="text-lg font-medium">{label}</label>}
         {required && <span className="text-lg font-medium">*</span>}
@@ -22,7 +21,7 @@ const Radio = ({ options, name, selected, onChange, label, required=false }) => 
                 className="w-4 h-4 accent-blue-500"
               />
               <span className="text-base font-normal">{option.label}</span>
-              <span class="checkmark"></span>
+              <span className="checkmark"></span>
             </label>
           ))}
         </div>

@@ -2,6 +2,7 @@ import { Geist, Geist_Mono, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Navbar from "./ui/Navbar";
 import Footer from "./ui/Footer";
+import herosectionBg from "@/assets/herosection/herosection-bg.jpg";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,11 +28,18 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={` ${SpaceGrotesk.className} antialiased`}>
-        <main>
+        <main
+          className=" bg-cover bg-center relative p-2"
+          style={{ backgroundImage: `url(${herosectionBg.src})` }}
+        >
+          <span className="absolute top-0 right-0 w-full h-full bg-black/55 z-10"></span>
           <Navbar />
+          <section className="relative z-20">
+
           {children}
+          </section>
+          <Footer />
         </main>
-        <Footer />
       </body>
     </html>
   );
