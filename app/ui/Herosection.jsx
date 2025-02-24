@@ -6,7 +6,7 @@ export default function Herosection({ isServeyFinish = false }) {
   return (
     <main className="min-h-screen   relative z-0 flex justify-center items-center -mt-28">
       <section className="relative z-20 max-w-7xl mx-auto  text-white grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="flex flex-col gap-5   md:justify-around">
+        <div className="flex flex-col gap-5 mt-28 md:mt-0  md:justify-around">
           <div>
             <h2 className="text-3xl lg:text-6xl font-medium ">
               Power Your Home. Empower Your Future. Switch to Solar Today!
