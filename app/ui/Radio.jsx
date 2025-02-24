@@ -12,7 +12,7 @@ const Radio = ({ options, name, selected, onChange, label, required=false }) => 
 
         <div className="flex flex-col space-y-2">
           {options.map((option) => (
-            <label key={option.value} className="flex items-center space-x-2 cursor-pointer">
+            <label key={option.value} className="flex items-center space-x-2 cursor-pointer container">
               <input
                 type="radio"
                 name={name}
@@ -22,6 +22,7 @@ const Radio = ({ options, name, selected, onChange, label, required=false }) => 
                 className="w-4 h-4 accent-blue-500"
               />
               <span className="text-base font-normal">{option.label}</span>
+              <span class="checkmark"></span>
             </label>
           ))}
         </div>
